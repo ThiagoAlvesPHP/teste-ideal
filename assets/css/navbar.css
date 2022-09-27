@@ -1,0 +1,116 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    background-color: rgba(107, 14, 100, 0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav .logo {
+    margin-left: 15px;
+    cursor: pointer;
+}
+nav .logo .link-menu {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+nav .links {
+    left: -100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(107, 14, 100, 0.7);;
+    transition: all ease 1s;
+}
+
+nav .links li {
+    margin: 10px 0;
+}
+
+nav .links li .link-menu, .link-logout {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all ease .5s;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+nav .links li .link-menu:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+nav .links .close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    color: #FFF;
+}
+
+nav .navbar-mobile-close {
+    left: -100%;
+} 
+
+nav .navbar-mobile-show {
+    left: 0;
+}
+
+nav .bar-mobile {
+    margin-right: 15px;
+    cursor: pointer;
+    font-size: 25px;
+    color: #FFF;
+}
+
+@media only screen and (min-width: 780px) {
+    nav .logo {
+        flex: 1;
+        margin-left: 5%;
+    }
+
+    nav .links {
+        flex: 1;
+        justify-content: end;
+        margin-right: 5%;
+        max-width: 1024px;
+        width: 100%;
+        left: 0;
+        position: unset;
+        height: 100%;
+        flex-direction: row;
+        background-color: transparent;
+    }
+
+    nav .links .close {
+        display: none;
+    }
+    nav .links li {
+        margin: 0 15px;
+    }
+    nav .links li .link-menu {
+        font-size: 16px;
+    }
+    nav .bar-mobile {
+        display: none;
+    }
+}

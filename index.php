@@ -8,10 +8,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 
+    <link rel="stylesheet" href="./assets/libs/fontawesome/css/all.css">
+
     <link rel="stylesheet" href="./assets/css/default.css">
-    <link rel="stylesheet" href="./assets/css/home.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
+
+<header>
+    <nav class="navbar">
+        <ul class="logo">
+            <li class="link-logo">
+                <a href="index.php" class="link-menu">
+                    Logo
+                </a>
+            </li>
+        </ul>
+        <ul class="links">
+            <i class="far fa-times-circle close"></i>
+            <li>
+                <a href="index.php" class="link-menu"><?=(new User)->get()['name']; ?></a>
+            </li>
+            <li>
+                <a href="logout.php" class="link-logout" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </a>
+            </li>
+        </ul>
+        <ul class="bar-mobile">
+            <li>
+                <i class="fas fa-bars show"></i>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="main">
+    <div class="content">
+        <h1 class="title"><i class="fas fa-tachometer-alt"></i> Dashboard</h1>
+        <p class="text">
+            <?=(new User)->get()['name']; ?>, você esta logado!
+        </p>
+    </div>
+</main>
     
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/navbar.js"></script>
 </body>
 </html>
