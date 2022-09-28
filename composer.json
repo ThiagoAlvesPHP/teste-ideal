@@ -1,0 +1,13 @@
+{
+    "name": "ideal/teste",
+    "authors": [
+        {
+            "name": "Thiago dos Santos Alves",
+            "email": "thiagoalves@ltdeveloper.com.br"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "twig/twig": "^3.0"
+    }
+}
