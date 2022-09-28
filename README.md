@@ -1,6 +1,6 @@
 # teste-ideal
 
-## Configuração de DB
+## Configuração de DB - MySQL
 - Arquivo: class/config.php
 
 - $config['db'] = "name_db";
