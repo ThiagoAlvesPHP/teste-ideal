@@ -6,8 +6,10 @@ setlocale(LC_TIME, "pt_BR", "pt_BR.utf-8", "portuguese");
 date_default_timezone_set('America/Sao_Paulo');
 
 spl_autoload_register(function($class) {
-	if (file_exists(__DIR__.'/class/'.$class.'.php')) {
-		include(__DIR__ . "/class/" . $class . ".php");
+	$file = __DIR__.'/class/'.$class.'.php';
+
+	if (file_exists($file)) {
+		include($file);
 	} else {
         echo 'Nenhuma classe encontrada!';
     }

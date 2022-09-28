@@ -13,11 +13,11 @@ class Login
 			echo "FALHA: " . $e->getMessage();
 		}
 	}
-
+    
     /**
      * logar
      */
-    public function Logar($params)
+    public function authorization($params)
     {
         $sql = $this->db->prepare("
             SELECT * FROM users 
